@@ -51,7 +51,7 @@ app.post("/",function(req,res){
         }
         
     })
-    //request.write(ob);
+    request.write(ob);
     request.end();
 })
 
