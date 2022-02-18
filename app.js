@@ -31,10 +31,10 @@ app.post("/",function(req,res){
     }
     const ob=JSON.stringify(data);
 
-    const url="https://us20.api.mailchimp.com/3.0/lists/9eb10414d2";
+    const url="mailchimp-link";
     const options={
         method:"POST",
-        auth:"rounak:9d4d3e45b22f52dcbaa5a587fa50bed3-us20"
+        auth:"mailchimp-token"
     }
     
     const request=https.request(url,options,function(response){
@@ -59,9 +59,6 @@ app.post("/failure",function(req,res){
     res.redirect("/")
 })
 
-//9d4d3e45b22f52dcbaa5a587fa50bed3-us20
-
-//9eb10414d2
 app.listen(process.env.PORT || 3000,function(){
     console.log("Server running")
 })
